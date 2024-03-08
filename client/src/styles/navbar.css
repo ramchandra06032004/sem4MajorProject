@@ -1,0 +1,42 @@
+.navbar {
+  height: 15vh;
+  width: 100%;
+  background-color: #fae0e7;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  align-items: center;
+}
+.logo img {
+  box-sizing: content-box;
+  height: 8vh;
+  width: 15vw;
+  cursor: pointer;
+}
+.navBtn {
+  gap: 1rem;
+  display: flex;
+}
+.landing-login-button {
+  text-decoration: none;
+  font-size: 1.2rem;
+  background-color: #13472e;
+  color: #fae0e7;
+  height: 2.5rem;
+  width: 5rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 1rem;
+}
+.landing-register-button {
+  text-decoration: none;
+  font-size: 1.2rem;
+  background-color: #13472e;
+  color: #fae0e7;
+  height: 2.5rem;
+  width: 7rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 1rem;
+}
