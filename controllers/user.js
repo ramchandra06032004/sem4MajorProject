@@ -1,5 +1,7 @@
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
+const Doctor = require("../models/Doctor");
+const Appointment = require("../models/Appointment");
 
 const login = async (req, res) => {
   const { email, password } = req.body;
@@ -59,11 +61,53 @@ const register = async (req, res) => {
       });
       await person.save();
       return res.status(201).json({ person });
-    }else{
-        return res.status(400).json({msg: "Please add all values in the request body"});
+    } else {
+      return res
+        .status(400)
+        .json({ msg: "Please add all values in the request body" });
     }
   } else {
     return res.status(400).json({ msg: "Email already in use" });
+  }
+};
+const getAllDoctors = async (req, res) => {
+  let doctors = await Doctor.find({});
+
+  return res.status(200).json({ doctors });
+};
+
+const getDoctorById = async (req, res) => {
+  try {
+    const doctor = await Doctor.findById(req.params.id);
+
+    if (!doctor) {
+      return res.status(404).json({ msg: "Doctor not found" });
+    }
+
+    res.status(200).json(doctor);
+  } catch (error) {
+    res.status(500).json({ error: error.toString() });
+  }
+};
+const createAppointment = async (req, res) => {
+  const { doctor, fullName, mobile, problem, email } = req.body;
+  try {
+    const newAppointment = new Appointment({
+      doctor: doctor,
+      patient: fullName,
+      mobile: mobile,
+      problem: problem,
+      email: email,
+    });
+
+    await newAppointment.save();
+
+    res.status(201).json({
+      message: "Appointment created successfully",
+      appointment: newAppointment,
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
   }
 };
 
@@ -72,4 +116,7 @@ module.exports = {
   register,
   dashboard,
   getAllUsers,
+  getAllDoctors,
+  getDoctorById,
+  createAppointment,
 };

@@ -1,12 +1,14 @@
 import React from "react";
 import "../styles/Landing.css";
-import { Link } from "react-router-dom";
+import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
+import Footer from "../Components/Footer";
 import Navbar from "../Components/navbar";
 import img1 from "../assets/img1.webp";
 import img2 from "../assets/img2.webp";
 import img3 from "../assets/img3.webp";
 import img4 from "../assets/img4.webp";
-import Footer from "../Components/footer";
+import img5 from "../assets/landing.avif";
+
 const Landing = () => {
   return (
     <>
@@ -21,7 +23,12 @@ const Landing = () => {
             FeelFree.Org shows you how
           </div>
           <div className="learnBtn">
-            <button>Learn More</button>
+            <Link to="/dashboard">
+              <button>Learn More</button>
+            </Link>
+          </div>
+          <div className="landingImage">
+            <img src={img5} alt="" />
           </div>
         </div>
         <div className="col2">
@@ -68,18 +75,36 @@ const Landing = () => {
       </div>
       <div className="col4">
         <div className="clo4Container">
-          <div className="clo4header">Select problem</div>
+          <div className="clo4header">Topics</div>
           <div className="problems">
-            <div className="problem">Addiction</div>
-            <div className="problem">Anxiety</div>
-            <div className="problem">Communication</div>
-            <div className="problem">Depression</div>
-            <div className="problem">Love and Friendship</div>
-            <div className="problem">Meditation</div>
-            <div className="problem">Pets</div>
-            <div className="problem">Stress</div>
-            <div className="problem">Suicide</div>
-            <div className="problem">PTSD and Trauma</div>
+            <Link className="problem" to="/addiction">
+              Addiction
+            </Link>
+            <Link className="problem" to="/anxiety">
+              Anxiety
+            </Link>
+
+            <Link className="problem" to="/depression">
+              Depression
+            </Link>
+            <Link className="problem" to="/love-and-friendship">
+              Love and Friendship
+            </Link>
+            <Link className="problem" to="/meditation">
+              Meditation
+            </Link>
+            <Link className="problem" to="/pets">
+              Pets
+            </Link>
+            <Link className="problem" to="/stress">
+              Stress
+            </Link>
+            <Link className="problem" to="/suicide">
+              Suicide
+            </Link>
+            <Link className="problem" to="/ptsd-and-trauma">
+              PTSD and Trauma
+            </Link>
           </div>
         </div>
       </div>

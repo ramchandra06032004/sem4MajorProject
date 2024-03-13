@@ -1,41 +1,60 @@
-.dashboard-main{
-    font-size: 30px;
-    height: 100vh;
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+.column1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  gap: 1.5rem;
+}
+.dashBoardContainer {
+  background-color: #eaf0f2;
+}
+.col1Head {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.col1SubHead {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  font-size: 1.3rem;
+  width: 35vw;
+}
+.col1Right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
-.dashboard-main p{
-  font-size: 20px;
-  padding: 0 20px
+.column2 {
+  background-color: #f5f2eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
 }
-
-.logout-button{
-    background: black;
-    color: white;
-    border: 3px solid black;
-    transition: background 1s linear 0ms;
-    transition: color 500ms linear 0ms;
-
-    width: 500px;
-    padding: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    border-radius: 30px;
-    font-weight: 600;
-    margin-top: 10px;
-
-    font-size: 20px;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  
-  .logout-button:hover{
-    color: #333;
-    background-color: white;
-  }
+.col2right img {
+  width: 35rem;
+}
+.col2SubHead1 {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  width: 40vw;
+}
+.col2Header {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #13472e;
+}
+.col2Left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}

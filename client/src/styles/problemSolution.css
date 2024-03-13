@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+.problemSolution {
+  background-color: #fffefc;
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Playfair Display", serif;
+}
+.pcTitle {
+  font-family: "Playfair Display", serif;
+}
+.pcImage img {
+  height: 25vw;
+  width: 25vw;
+  border-radius: 50%;
+}
+
+.pcInfo {
+  width: 55vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35vw;
+  gap: 1rem;
+}
+.pcImage {
+  width: 45vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  color: #13472e;
+}
+.pcTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+}

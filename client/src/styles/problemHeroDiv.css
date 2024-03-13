@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+.peoblemHeroDivContainer {
+  background-color: #f5f1ea;
+  height: 85vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.problemImage img {
+  height: 85%;
+  width: 90%;
+  margin-left: 69px;
+  border-top-left-radius: 15rem;
+  border-bottom-left-radius: 15rem;
+}
+.problemImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.problemInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10rem;
+}
+.problemDiscription {
+  width: 75%;
+}
+.subSentence {
+  color: #13472e;
+  height: 3rem;
+  font-weight: 900;
+}
+.problemName {
+  font-size: 3rem;
+  color: #13472e;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  font-family: "Playfair Display", serif;
+}
+.problemDiscription {
+  font-size: 1.1rem;
+  color: #13472e;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  font-family: "Playfair Display", serif;
+}
+.problemInfo button {
+  width: 20%;
+  height: 3rem;
+  background-color: #13472e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: "Playfair Display", serif;
+}
+.problemInfo button:hover {
+  background-color: #f5f1ea;
+  border: 1px solid #13472e;
+  color: #13472e;
+}

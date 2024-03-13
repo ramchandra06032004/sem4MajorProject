@@ -17,7 +17,7 @@ const footer = () => {
         <div className="footerLink">Privacy Policy</div>
         <div className="footerLink">Terms of Use</div>
       </div>
-      <div className="copyright">© 2021 FeelFree.Org. All rights reserved</div>
+      <div className="copyright">© 2023 FeelFree.Org. All rights reserved</div>
     </div>
   );
 };

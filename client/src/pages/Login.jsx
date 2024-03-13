@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Image from "../assets/image.png";
-import Logo from "../assets/logo.png";
+import Image from "../assets/loginImage.jpg";
+import Logo from "../assets/logo/png/logo-no-background.png";
 import GoogleSvg from "../assets/icons8-google.svg";
 import { FaEye } from "react-icons/fa6";
 import { FaEyeSlash } from "react-icons/fa6";
@@ -11,10 +11,10 @@ import { toast } from "react-toastify";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [ token, setToken ] = useState(JSON.parse(localStorage.getItem("auth")) || "");
+  const [token, setToken] = useState(
+    JSON.parse(localStorage.getItem("auth")) || ""
+  );
   const navigate = useNavigate();
-
-
 
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
@@ -31,7 +31,7 @@ const Login = () => {
           "http://localhost:3000/api/v1/login",
           formData
         );
-        localStorage.setItem('auth', JSON.stringify(response.data.token));
+        localStorage.setItem("auth", JSON.stringify(response.data.token));
         toast.success("Login successfull");
         navigate("/dashboard");
       } catch (err) {
@@ -44,7 +44,7 @@ const Login = () => {
   };
 
   useEffect(() => {
-    if(token !== ""){
+    if (token !== "") {
       toast.success("You already logged in");
       navigate("/dashboard");
     }
@@ -57,9 +57,9 @@ const Login = () => {
       </div>
       <div className="login-right">
         <div className="login-right-container">
-          <div className="login-logo">
+          <Link to="/" className="login-logo">
             <img src={Logo} alt="" />
-          </div>
+          </Link>
           <div className="login-center">
             <h2>Welcome back!</h2>
             <p>Please enter your details</p>

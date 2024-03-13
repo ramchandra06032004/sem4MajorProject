@@ -2,7 +2,7 @@
 .landing-main {
   height: auto;
   width: 100%;
-  background-image: url("../assets/loadingback.png");
+  background-color: #f5f2eb;
   background-position: center, center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -49,7 +49,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 .col2Slow {
   width: 50vw;
@@ -63,8 +63,12 @@
   font-size: 1.3rem;
   font-weight: bolder;
 }
+.landingImage img {
+  margin: 3rem;
+  border-radius: 15rem;
+}
 .col3 {
-  background-color: #fae0e7;
+  background-color: #f5f2eb;
   display: flex;
   padding-top: 3rem;
   align-items: center;
@@ -89,7 +93,7 @@
   font-weight: bolder;
 }
 .col4 {
-  background-color: #fae0e7;
+  background-color: #f5f2eb;
   width: 100%;
   height: 60vh;
   display: flex;
@@ -131,4 +135,6 @@
   height: 3rem;
   background-color: #045346;
   border-radius: 1rem;
+  text-decoration: none;
+  color: #f5d560;
 }

@@ -1,0 +1,177 @@
+[
+  {
+    "name": "Dr. Aarav Sharma",
+    "education": "Ph.D. in Psychology",
+    "fees_per_session": "INR 1500",
+    "address": "123 Main Street, Bangalore, Karnataka, India",
+    "image_url": "https://randomuser.me/api/portraits/men/1.jpg"
+  },
+  {
+    "name": "Dr. Nisha Patel",
+    "education": "MA in Psychology",
+    "fees_per_session": "INR 1200",
+    "address": "456 Park Avenue, Mumbai, Maharashtra, India",
+    "image_url": "https://randomuser.me/api/portraits/women/2.jpg"
+  },
+  {
+    "name": "Dr. Vikram Singh",
+    "education": "MS in Clinical Psychology",
+    "fees_per_session": "INR 1800",
+    "address": "789 Lake Road, Kolkata, West Bengal, India",
+    "image_url": "https://randomuser.me/api/portraits/men/3.jpg"
+  },
+  {
+    "name": "Dr. Priya Gupta",
+    "education": "Ph.D. in Counseling Psychology",
+    "fees_per_session": "INR 1600",
+    "address": "101 River Side, Delhi, India",
+    "image_url": "https://randomuser.me/api/portraits/women/4.jpg"
+  },
+  {
+    "name": "Dr. Rohan Joshi",
+    "education": "MA in Behavioral Psychology",
+    "fees_per_session": "INR 1400",
+    "address": "567 Hill View, Chennai, Tamil Nadu, India",
+    "image_url": "https://randomuser.me/api/portraits/men/5.jpg"
+  },
+  {
+    "name": "Dr. Pooja Sharma",
+    "education": "MS in Clinical Psychology",
+    "fees_per_session": "INR 1700",
+    "address": "321 Garden Lane, Pune, Maharashtra, India",
+    "image_url": "https://randomuser.me/api/portraits/women/6.jpg"
+  },
+  {
+    "name": "Dr. Ajay Singh",
+    "education": "Ph.D. in Psychology",
+    "fees_per_session": "INR 1500",
+    "address": "890 Forest Street, Hyderabad, Telangana, India",
+    "image_url": "https://randomuser.me/api/portraits/men/7.jpg"
+  },
+  {
+    "name": "Dr. Ananya Reddy",
+    "education": "MA in Counseling Psychology",
+    "fees_per_session": "INR 1300",
+    "address": "234 Hilltop Avenue, Ahmedabad, Gujarat, India",
+    "image_url": "https://randomuser.me/api/portraits/women/8.jpg"
+  },
+  {
+    "name": "Dr. Arjun Kumar",
+    "education": "MS in Behavioral Psychology",
+    "fees_per_session": "INR 1900",
+    "address": "678 Sunset Boulevard, Jaipur, Rajasthan, India",
+    "image_url": "https://randomuser.me/api/portraits/men/9.jpg"
+  },
+  {
+    "name": "Dr. Deepika Jain",
+    "education": "Ph.D. in Clinical Psychology",
+    "fees_per_session": "INR 2000",
+    "address": "456 Mountain View, Lucknow, Uttar Pradesh, India",
+    "image_url": "https://randomuser.me/api/portraits/women/10.jpg"
+  },
+  {
+    "name": "Dr. Vivek Sharma",
+    "education": "MA in Psychology",
+    "fees_per_session": "INR 1400",
+    "address": "789 Ocean Drive, Chandigarh, India",
+    "image_url": "https://randomuser.me/api/portraits/men/11.jpg"
+  },
+  {
+    "name": "Dr. Meera Patel",
+    "education": "MS in Counseling Psychology",
+    "fees_per_session": "INR 1600",
+    "address": "101 Park Street, Kochi, Kerala, India",
+    "image_url": "https://randomuser.me/api/portraits/women/12.jpg"
+  },
+  {
+    "name": "Dr. Rahul Singh",
+    "education": "Ph.D. in Clinical Psychology",
+    "fees_per_session": "INR 1800",
+    "address": "234 Lakeview Drive, Indore, Madhya Pradesh, India",
+    "image_url": "https://randomuser.me/api/portraits/men/13.jpg"
+  },
+  {
+    "name": "Dr. Riya Sharma",
+    "education": "MA in Behavioral Psychology",
+    "fees_per_session": "INR 1500",
+    "address": "567 Sunrise Avenue, Varanasi, Uttar Pradesh, India",
+    "image_url": "https://randomuser.me/api/portraits/women/14.jpg"
+  },
+  {
+    "name": "Dr. Arnav Patel",
+    "education": "MS in Clinical Psychology",
+    "fees_per_session": "INR 1700",
+    "address": "890 Hillcrest Road, Nagpur, Maharashtra, India",
+    "image_url": "https://randomuser.me/api/portraits/men/15.jpg"
+  },
+  {
+    "name": "Dr. Aanya Singh",
+    "education": "Ph.D. in Psychology",
+    "fees_per_session": "INR 1600",
+    "address": "123 Park Avenue, Patna, Bihar, India",
+    "image_url": "https://randomuser.me/api/portraits/women/16.jpg"
+  },
+  {
+    "name": "Dr. Yuvraj Gupta",
+    "education": "MA in Counseling Psychology",
+    "fees_per_session": "INR 1400",
+    "address": "456 Forest Lane, Bhopal, Madhya Pradesh, India",
+    "image_url": "https://randomuser.me/api/portraits/men/17.jpg"
+  },
+  {
+    "name": "Dr. Preeti Sharma",
+    "education": "MS in Behavioral Psychology",
+    "fees_per_session": "INR 1800",
+    "address": "789 River Road, Guwahati, Assam, India",
+    "image_url": "https://randomuser.me/api/portraits/women/18.jpg"
+  },
+  {
+    "name": "Dr. Kabir Singh",
+    "education": "Ph.D. in Clinical Psychology",
+    "fees_per_session": "INR 2000",
+    "address": "101 Forest View, Jodhpur, Rajasthan, India",
+    "image_url": "https://randomuser.me/api/portraits/men/19.jpg"
+  },
+  {
+    "name": "Dr. Aaradhya Patel",
+    "education": "MA in Psychology",
+    "fees_per_session": "INR 1300",
+    "address": "234 Maple Street, Visakhapatnam, Andhra Pradesh, India",
+    "image_url": "https://randomuser.me/api/portraits/women/20.jpg"
+  },
+  {
+    "name": "Dr. Aadi Joshi",
+    "education": "MS in Counseling Psychology",
+    "fees_per_session": "INR 1500",
+    "address": "567 Oak Lane, Surat, Gujarat, India",
+    "image_url": "https://randomuser.me/api/portraits/men/21.jpg"
+  },
+  {
+    "name": "Dr. Ishita Sharma",
+    "education": "Ph.D. in Psychology",
+    "fees_per_session": "INR 1700",
+    "address": "890 Pine Street, Ludhiana, Punjab, India",
+    "image_url": "https://randomuser.me/api/portraits/women/22.jpg"
+  },
+  {
+    "name": "Dr. Arjun Gupta",
+    "education": "MA in Behavioral Psychology",
+    "fees_per_session": "INR 1900",
+    "address": "123 Elm Street, Kanpur, Uttar Pradesh, India",
+    "image_url": "https://randomuser.me/api/portraits/men/23.jpg"
+  },
+  {
+    "name": "Dr. Ria Singh",
+    "education": "MS in Clinical Psychology",
+    "fees_per_session": "INR 1600",
+    "address": "456 Cedar Lane, Coimbatore, Tamil Nadu, India",
+    "image_url": "https://randomuser.me/api/portraits/women/24.jpg"
+  },
+  {
+    "name": "Dr. Krish Patel",
+    "education": "Ph.D. in Counseling Psychology",
+    "fees_per_session": "INR 1800",
+    "address": "789 Birch Road, Thiruvananthapuram, Kerala, India",
+    "image_url": "https://randomuser.me/api/portraits/men/25.jpg"
+  }
+]

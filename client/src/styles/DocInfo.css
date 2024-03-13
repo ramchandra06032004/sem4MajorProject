@@ -1,0 +1,8 @@
+.DocContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
