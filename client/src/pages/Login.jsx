@@ -32,8 +32,9 @@ const Login = () => {
           formData
         );
         localStorage.setItem("auth", JSON.stringify(response.data.token));
+        const userId = response.data.userId;
         toast.success("Login successfull");
-        navigate("/dashboard");
+        navigate("/dashboard", { state: { userId } });
       } catch (err) {
         console.log(err);
         toast.error(err.message);

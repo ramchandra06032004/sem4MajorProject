@@ -1,25 +1,31 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Dashboard.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
 import Navbar from "../Components/navbar";
 import dashImage from "../assets/dashbordImage.webp";
 import Doctors from "../assets/Doctors.jpg";
 import Footer from "../Components/Footer";
+
 const Dashboard = () => {
+  const [userId, setUserId] = useState(null);
   const [token, setToken] = useState(
     JSON.parse(localStorage.getItem("auth")) || ""
   );
   const [data, setData] = useState({});
   const navigate = useNavigate();
-
+  const location = useLocation();
   const fetchLuckyNumber = async () => {
     let axiosConfig = {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     };
+    const userIdFromLocation = location.state?.userId;
+    if (userIdFromLocation) {
+      setUserId(userIdFromLocation);
+    }
 
     try {
       const response = await axios.get(
@@ -42,7 +48,8 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-main">
-      <Navbar />
+      <Navbar id={userId} />
+
       <div className="dashBoardContainer">
         <div className="column1">
           <div className="col1Right">
@@ -51,9 +58,12 @@ const Dashboard = () => {
               Know more about our paid plans and paid resorces that will
               definitely help you to improve your mental health.
             </div>
-            <Link to={"/docInfo"} className="knowMore">
-              <div className="logout-button knowMore">Know More</div>
-            </Link>
+            <button
+              onClick={() => navigate("/docInfo", { state: { userId } })}
+              className="knowMore"
+            >
+              Know More
+            </button>
           </div>
           <div className="col1Left">
             <img src={dashImage} alt="" />
@@ -79,6 +89,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
+
         <div className="col4">
           <div className="clo4Container">
             <div className="clo4header">Topics</div>
@@ -86,6 +97,7 @@ const Dashboard = () => {
               <Link className="problem" to="/addiction">
                 Addiction
               </Link>
+
               <Link className="problem" to="/anxiety">
                 Anxiety
               </Link>

@@ -7,8 +7,11 @@ const {
   dashboard,
   getAllUsers,
   getAllDoctors,
-  getDoctorById,
+
   createAppointment,
+  getAUser,
+  getADoctor,
+  getAAppointment,
 } = require("../controllers/user");
 const authMiddleware = require("../middleware/auth");
 
@@ -17,7 +20,9 @@ router.route("/register").post(register);
 router.route("/dashboard").get(authMiddleware, dashboard);
 router.route("/users").get(getAllUsers);
 router.route("/doctors").get(getAllDoctors);
-router.route("/doctors/:id").get(getDoctorById);
 router.route("/appointments").post(createAppointment);
+router.route("/user").post(getAUser);
+router.route("/doctor/").post(getADoctor);
+router.route("/appointment").post(getAAppointment);
 
 module.exports = router;

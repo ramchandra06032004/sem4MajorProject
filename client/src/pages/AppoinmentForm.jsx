@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../Components/navbar";
-import Footer from "../Components/Footer";
+import Navbar from "../Components/navbar.jsx";
+import Footer from "../Components/Footer.jsx";
 import "../styles/AppoinmentForm.css";
 import { useParams } from "react-router-dom";
 
-const AppoinmentForm = () => {
+const AppoinmentForm = ({}) => {
   const [docData, setDocData] = useState({});
   const [fullName, setFullName] = useState("");
   const [mobile, setMobile] = useState("");
   const [facedProblem, setFacedProblem] = useState("");
   const [email, setEmail] = useState("");
-  const { id } = useParams();
-
+  const { id, userId } = useParams();
   const getSingleDoctor = async () => {
     try {
       const response = await fetch(
@@ -24,12 +23,10 @@ const AppoinmentForm = () => {
   };
   useEffect(() => {
     getSingleDoctor();
-  }, [id]);
+  }, []);
 
   const handleAppoinment = async (e) => {
     e.preventDefault();
-
-    console.log(fullName, mobile, email, facedProblem, docData._id);
 
     try {
       const response = await fetch(
@@ -40,8 +37,8 @@ const AppoinmentForm = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            doctor: docData.name, // Send the doctor's _id as the doctorId
-            fullName: fullName,
+            doctor: id, // Send the doctor's _id as the doctorId
+            userId: userId,
             mobile: mobile,
             problem: facedProblem,
             email: email,

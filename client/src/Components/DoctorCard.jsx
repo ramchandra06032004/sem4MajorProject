@@ -9,7 +9,7 @@ const DoctorCard = (props) => {
       <div className="education">Education :-{props.speciality}</div>
       <div className="fees_per_session">Fees per session :{props.fees}</div>
       <div className="address">Address :- {props.address}</div>
-      <Link to={`/bookppoinment/${props.id}`}>
+      <Link to={`/bookppoinment/${props.id}/${props.userId}`}>
         <button className="logout-button btn">Book Appointment</button>
       </Link>
     </div>

@@ -25,7 +25,9 @@ const login = async (req, res) => {
         }
       );
 
-      return res.status(200).json({ msg: "user logged in", token });
+      return res
+        .status(200)
+        .json({ msg: "user logged in", token, userId: foundUser._id });
     } else {
       return res.status(400).json({ msg: "Bad password" });
     }
@@ -76,25 +78,13 @@ const getAllDoctors = async (req, res) => {
   return res.status(200).json({ doctors });
 };
 
-const getDoctorById = async (req, res) => {
-  try {
-    const doctor = await Doctor.findById(req.params.id);
-
-    if (!doctor) {
-      return res.status(404).json({ msg: "Doctor not found" });
-    }
-
-    res.status(200).json(doctor);
-  } catch (error) {
-    res.status(500).json({ error: error.toString() });
-  }
-};
 const createAppointment = async (req, res) => {
-  const { doctor, fullName, mobile, problem, email } = req.body;
+  const { doctor, userId, mobile, problem, email } = req.body;
+  console.log(doctor, userId, mobile, problem, email);
   try {
     const newAppointment = new Appointment({
       doctor: doctor,
-      patient: fullName,
+      patient: userId,
       mobile: mobile,
       problem: problem,
       email: email,
@@ -111,12 +101,60 @@ const createAppointment = async (req, res) => {
   }
 };
 
+const getAUser = async (req, res) => {
+  const { id } = req.body;
+
+  try {
+    const user = await User.findById(id);
+    if (!user) {
+      return res.status(404).json({ msg: "user Not Found" });
+    }
+    res.json(user);
+  } catch (error) {
+    res.status(500).json({ error: error.toString() });
+  }
+};
+
+const getAAppointment = async (req, res) => {
+  const { id } = req.body;
+
+  try {
+    const appointments = await Appointment.find({
+      patient: id,
+    });
+    if (!appointments) {
+      return res
+        .status(404)
+        .json({ msg: "No appointments found for this user" });
+    }
+    res.json(appointments);
+  } catch (err) {
+    res.status(500).json({ msg: "Server error" });
+  }
+};
+const getADoctor = async (req, res) => {
+  const { id } = req.body;
+
+  try {
+    const doctor = await Doctor.findById(id);
+    if (!doctor) {
+      return res.status(404).json({ msg: "Doctor not found" });
+    }
+    res.json(doctor);
+  } catch (err) {
+    res.status(500).json({ msg: "Server error" });
+  }
+};
+
 module.exports = {
   login,
   register,
   dashboard,
   getAllUsers,
   getAllDoctors,
-  getDoctorById,
+
   createAppointment,
+  getAUser,
+  getADoctor,
+  getAAppointment,
 };

@@ -21,6 +21,7 @@ import Suicide from "./pages/Suicide.jsx";
 import PTSDAndTrauma from "./pages/PTSDAndTrauma.jsx";
 import DocInfo from "./pages/DocInfo.jsx";
 import AppoinmentForm from "../src/pages/AppoinmentForm.jsx";
+import Profile from "../src/pages/Profile.jsx";
 
 function App() {
   return (
@@ -43,7 +44,11 @@ function App() {
           <Route path="/suicide" element={<Suicide />} />
           <Route path="/ptsd-and-trauma" element={<PTSDAndTrauma />} />
           <Route path="/docInfo" element={<DocInfo />} />
-          <Route path="/bookppoinment/:id" element={<AppoinmentForm />} />
+          <Route
+            path="/bookppoinment/:id/:userId"
+            element={<AppoinmentForm />}
+          />
+          <Route path="/profile/:id" element={<Profile />} />
         </Route>
       </Routes>
       <ToastContainer position="top-center" />
