@@ -19,11 +19,16 @@
 }
 .appoinmentContainer {
   display: flex;
-  height: 25vh;
+  height: 35vh;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
+  padding: 3rem 0px;
+  overflow-y: scroll;
+}
+.appoinmentContainer::-webkit-scrollbar {
+  display: none;
 }
 .appoinments {
   display: flex;

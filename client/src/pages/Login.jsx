@@ -11,6 +11,9 @@ import { toast } from "react-toastify";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [userId, setUserId] = useState(null);
+  const [isDoctor, setIsDoctor] = useState(false);
+  const [doctorName, setDoctorName] = useState(null);
   const [token, setToken] = useState(
     JSON.parse(localStorage.getItem("auth")) || ""
   );
@@ -32,9 +35,11 @@ const Login = () => {
           formData
         );
         localStorage.setItem("auth", JSON.stringify(response.data.token));
-        const userId = response.data.userId;
-        toast.success("Login successfull");
-        navigate("/dashboard", { state: { userId } });
+        setUserId(response.data.userId);
+        setIsDoctor(response.data.isDoctor);
+        setDoctorName(response.data.name);
+
+        toast.success("Login successful");
       } catch (err) {
         console.log(err);
         toast.error(err.message);
@@ -45,11 +50,12 @@ const Login = () => {
   };
 
   useEffect(() => {
-    if (token !== "") {
-      toast.success("You already logged in");
-      navigate("/dashboard");
+    if (isDoctor) {
+      navigate(`/doctorHomepage/${doctorName}`, { state: { userId } });
+    } else if (userId !== null) {
+      navigate("/dashboard", { state: { userId } });
     }
-  }, []);
+  }, [isDoctor, userId, doctorName]);
 
   return (
     <div className="login-main">

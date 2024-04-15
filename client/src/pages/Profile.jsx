@@ -15,10 +15,9 @@ const Profile = () => {
     const fetchData = async () => {
       try {
         // Fetch user
-        let response = await fetch(`http://localhost:3000/api/v1/user`, {
-          method: "POST",
+        let response = await fetch(`http://localhost:3000/api/v1/user/${id}`, {
+          method: "GET",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ id }),
         });
         let data = await response.json();
         setUser(data);
@@ -34,13 +33,17 @@ const Profile = () => {
         setAppointment(data);
 
         // Fetch doctor
-        response = await fetch(`http://localhost:3000/api/v1/doctor`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ id: data[0].doctor }),
+        const doctorFetches = data.map(async (appointment) => {
+          console.log(appointment.doctor);
+          const response = await fetch(`http://localhost:3000/api/v1/doctor`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ id: appointment.doctor }),
+          });
+          return response.json();
         });
-        data = await response.json();
-        setDoctor(data);
+        const doctors = await Promise.all(doctorFetches);
+        setDoctor(doctors);
       } catch (err) {
         console.error("Error:", err);
       }
@@ -63,20 +66,21 @@ const Profile = () => {
       </div>
       <div className="appoinmentContainer">
         {appointment &&
+          doctor &&
           appointment.map((item, indx) => {
             return (
-              <div className="appoinments">
+              <div className="appoinments" key={indx}>
                 <p>
                   <span>Status of Appointment:</span> <br />
                   <span> {item.status}</span>
                 </p>
                 <p>
                   <span>Doctor Name:</span> <br />
-                  <span>{doctor.name}</span>
+                  <span>{doctor[indx].name}</span>
                 </p>
                 <p>
                   <span>Clinic Address:</span> <br />
-                  <span>{doctor.address}</span>
+                  <span>{doctor[indx].address}</span>
                 </p>
                 <p>
                   <span>Suffering From:</span> <br />
@@ -84,7 +88,7 @@ const Profile = () => {
                 </p>
                 <p>
                   <span>Appointment Date:</span> <br />
-                  <span>{item.createdAt}</span>
+                  <span>{new Date(item.createdAt).toLocaleDateString()}</span>
                 </p>
               </div>
             );

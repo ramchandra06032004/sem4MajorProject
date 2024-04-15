@@ -1,0 +1,23 @@
+.ApoinmentCard {
+  margin: 10px;
+  height: 10vh;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.ele {
+  margin: 10px;
+  height: 10vh;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: flex;
+  width: 120vw;
+  justify-content: center;
+  align-items: center;
+}

@@ -22,6 +22,7 @@ import PTSDAndTrauma from "./pages/PTSDAndTrauma.jsx";
 import DocInfo from "./pages/DocInfo.jsx";
 import AppoinmentForm from "../src/pages/AppoinmentForm.jsx";
 import Profile from "../src/pages/Profile.jsx";
+import DocHomePage from "../src/pages/DocHomePage.jsx";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           <Route path="/suicide" element={<Suicide />} />
           <Route path="/ptsd-and-trauma" element={<PTSDAndTrauma />} />
           <Route path="/docInfo" element={<DocInfo />} />
+          <Route path="/doctorHomepage/:name" element={<DocHomePage />} />
           <Route
             path="/bookppoinment/:id/:userId"
             element={<AppoinmentForm />}
